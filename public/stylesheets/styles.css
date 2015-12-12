@@ -1,0 +1,85 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+  body{
+    background-color: #273F52;
+  }
+  #stopWatch{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(14,35,45,.5);
+    color: #fff;
+    text-shadow: 0px 0px 1px #fff;
+    text-align: center;
+    font-size: 98px;
+    font-weight: 100;
+    font-family: 'Open Sans Condensed', Helvetica;
+  }
+  button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    outline: 0;
+    border: solid 2px rgba(255,255,255,0.);
+    background-color: rgba(157,178,189,0.2);
+  }
+  button:hover{
+    background-color: #276A8C;
+    transition: .2s linear;
+  }
+  button:first-child{
+    color: #A9CEA9;
+    font-size: 16px;
+    font-family: Helvetica;
+  }
+  button:nth-child(2){
+    color: #CE6E74;
+    font-size: 16px;
+    font-family: Helvetica;
+  }
+  button:nth-child(3){
+    color: #1B313F;
+    font-size: 16px;
+    font-family: Helvetica;
+  }
+  .time{
+    box-shadow: inset 0px 0px 9px #111B21;
+    background-color: #1A2933;
+    margin: 10px;
+  }
+  .bt{
+    position: relative;
+    bottom: 25px;
+  }
+  .pulse{
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .startColor{
+    background: radial-gradient(ellipse at center, rgba(169,206,169,1) 0%,rgba(169,206,169,0) 65%,rgba(169,206,169,0) 100%);
+    border: dotted 75px #89D289;
+  }
+  .stopColor{
+    background: radial-gradient(ellipse at center, rgba(206,110,116,1) 0%,rgba(206,110,116,0) 65%,rgba(206,110,116,0) 100%);
+    border: dotted 75px #E04F40;
+  }
+  .shutoff{
+    background: url('../../public/images/static.png');
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+  }
+/*ANIMATION CSS CLASSES*/
+.startPulse { animation: stopAnimate 2s infinite linear; }
+.stopPulse { animation: startAnimate 2s infinite ease-out; }
+.shutDown{ animation: shutDown 2s forwards; }
